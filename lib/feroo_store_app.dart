@@ -8,9 +8,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Feroo_Store',
-      home: Scaffold(
-        appBar: AppBar(title: Text("data"),),
-      ),
+       home: Scaffold(
+         body: Text("moo"),
+       ),
     );
   }
 }
