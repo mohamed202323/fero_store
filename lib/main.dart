@@ -12,6 +12,7 @@ void main()async {
           messagingSenderId:"587995618710",
           projectId: "feroo-store"
       )
+  );
   runApp(const MyApp());
 }
 
