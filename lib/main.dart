@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'dart:io';
 import 'feroo_store_app.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -13,7 +12,6 @@ void main()async {
           messagingSenderId:"587995618710",
           projectId: "feroo-store"
       )
-  );
   runApp(const MyApp());
 }
 
