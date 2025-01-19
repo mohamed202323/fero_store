@@ -3,6 +3,7 @@ import 'package:feroo_store/core/app/env.variabels.dart';
 import 'package:feroo_store/core/common/screan/no_network_screan.dart';
 import 'package:feroo_store/core/routes/app_route.dart';
 import 'package:feroo_store/core/style/font/font_size.dart';
+import 'package:feroo_store/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
             designSize: const Size(360, 690),
             minTextAdapt: true,
             child: MaterialApp(
+              theme:themeLight() ,
               debugShowCheckedModeBanner: EnvVariabels.instance.debugMode,
               title: 'Feroo_Store',
                onGenerateRoute:AppRoute.onGenerateRoute,

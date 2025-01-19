@@ -1,4 +1,4 @@
-import 'package:feroo_store/core/extention/context_extention.dart';
+import 'package:feroo_store/core/extension/context_extension.dart';
 import 'package:feroo_store/core/routes/app_route.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +9,7 @@ class TestScreenTwo extends StatelessWidget{
         appBar: AppBar(title: Text("two"),),
         body:Container(
           color: Colors.pinkAccent,
-          child: Center(child: MaterialButton(
-            onPressed:(){
-              context.pushNamed(AppRoute.testScreenOne);
-            },
-            child: Text("go to screen one"),
-          ),),
+          child:Image.asset(context.images.testImage??'')
         )
     );
   }
