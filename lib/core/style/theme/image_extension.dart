@@ -1,5 +1,3 @@
-import 'package:feroo_store/core/style/colors/colors_dark.dart';
-import 'package:feroo_store/core/style/colors/colors_light.dart';
 import 'package:feroo_store/core/style/images/app_images.dart';
 
 import 'package:flutter/material.dart';
