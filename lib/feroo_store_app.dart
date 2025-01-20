@@ -24,22 +24,27 @@ class MyApp extends StatelessWidget {
             designSize: const Size(360, 690),
             minTextAdapt: true,
             child: MaterialApp(
-              locale:Locale("en"),
+              locale:Locale("ar"),
               supportedLocales: AppLocalizationsSetup.supportedLocales,
               localeResolutionCallback: AppLocalizationsSetup.localeResolutionCallback,
               localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
-              theme:themeLight() ,
+              theme:themeDark() ,
               debugShowCheckedModeBanner: EnvVariabels.instance.debugMode,
               title: 'Feroo_Store',
                onGenerateRoute:AppRoute.onGenerateRoute,
                initialRoute: AppRoute.testScreenOne,
               builder: (context,widget){
                 ConnectivityNetworkController.instance.init();
-                return Scaffold(
-                  body: Builder(
-                      builder:(context){
-                        return widget! ;
-                      },
+                return GestureDetector(
+                  onTap: (){
+                    FocusManager.instance.primaryFocus?.unfocus();
+                  },
+                  child: Scaffold(
+                    body: Builder(
+                        builder:(context){
+                          return widget! ;
+                        },
+                    ),
                   ),
                 );
               },
