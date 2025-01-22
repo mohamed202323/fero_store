@@ -7,12 +7,12 @@ import 'package:feroo_store/core/utils/app_regex.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TextFeild extends StatefulWidget {
+class SignUpTextFeild extends StatefulWidget {
   @override
-  State<TextFeild> createState() => textfeild();
+  State<SignUpTextFeild> createState() => textfeild();
 }
 
-class textfeild extends State<TextFeild> {
+class textfeild extends State<SignUpTextFeild> {
   bool isSecure = true;
 
   @override
@@ -20,6 +20,21 @@ class textfeild extends State<TextFeild> {
     return Form(
       child: Column(
         children: [
+          CustomFadeInRight(
+            duration: 600,
+            child: CustomTextField(
+                controller: TextEditingController(),
+                suffixIcon: Icon(Icons.person,
+                  color:context.color.textColor ,),
+                hintText: context.translate(LangKeys.fullName),
+                validator: (value) {
+                  if (value!.isEmpty || value.length < 4) {
+                    return context.translate(LangKeys.validName);
+                  } else
+                    return null;
+                }),
+          ),
+          SizedBox(height: 10.h),
           CustomFadeInRight(
             duration: 600,
             child: CustomTextField(
