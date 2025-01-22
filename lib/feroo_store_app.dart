@@ -2,7 +2,7 @@ import 'package:feroo_store/core/app/connectivity_network_controller.dart';
 import 'package:feroo_store/core/app/env.variabels.dart';
 import 'package:feroo_store/core/app/languages/app_localizations.dart';
 import 'package:feroo_store/core/app/languages/app_localizations_setup.dart';
-import 'package:feroo_store/core/common/screan/no_network_screan.dart';
+import 'package:feroo_store/core/common/screans/no_network_screan.dart';
 import 'package:feroo_store/core/routes/app_route.dart';
 import 'package:feroo_store/core/style/font/font_size.dart';
 import 'package:feroo_store/core/style/theme/app_theme.dart';
@@ -24,15 +24,15 @@ class MyApp extends StatelessWidget {
             designSize: const Size(360, 690),
             minTextAdapt: true,
             child: MaterialApp(
-              locale:Locale("ar"),
+              locale:Locale("en"),
               supportedLocales: AppLocalizationsSetup.supportedLocales,
               localeResolutionCallback: AppLocalizationsSetup.localeResolutionCallback,
               localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
               theme:themeDark() ,
               debugShowCheckedModeBanner: EnvVariabels.instance.debugMode,
               title: 'Feroo_Store',
-               onGenerateRoute:AppRoute.onGenerateRoute,
-               initialRoute: AppRoute.testScreenOne,
+              onGenerateRoute:AppRoute.onGenerateRoute,
+               initialRoute: AppRoute.login,
               builder: (context,widget){
                 ConnectivityNetworkController.instance.init();
                 return GestureDetector(

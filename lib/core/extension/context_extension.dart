@@ -1,7 +1,7 @@
 
 import 'package:feroo_store/core/app/languages/app_localizations.dart';
-import 'package:feroo_store/core/style/theme/color_extention.dart';
-import 'package:feroo_store/core/style/theme/image_extension.dart';
+import 'package:feroo_store/core/style/theme/assets_extension.dart';
+import 'package:feroo_store/core/style/theme/color_extension.dart';
 import 'package:flutter/material.dart';
 
 extension ContextExtention on BuildContext{
@@ -10,7 +10,9 @@ extension ContextExtention on BuildContext{
   MyColors get color => Theme.of(this).extension<MyColors>()!;
 
 //images
-  MyImages get images => Theme.of(this).extension<MyImages>()!;
+  MyAssets get images => Theme.of(this).extension<MyAssets>()!;
+
+  TextStyle get textStyle =>Theme.of(this).textTheme.displaySmall!;
 
   String translate (String langKey){
     return AppLocalizations.of(this)!.translate(langKey).toString();
